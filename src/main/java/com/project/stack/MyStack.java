@@ -69,8 +69,8 @@ public class MyStack<T extends Comparable<T>> implements Comparable<MyStack<T>> 
 
     @Override
     public int compareTo(MyStack<T> o) {
-        if (size < o.size) {
-            return -1;
+        if (size != o.size) {
+            return size - o.size;
         }
         StackNode<T> thisPointer = topElement;
         StackNode<T> otherPointer = o.topElement;
