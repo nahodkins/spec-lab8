@@ -15,8 +15,7 @@ public class MyStack<T extends Comparable<T>> implements Comparable<MyStack<T>> 
     }
 
     public MyStack(T value) {
-        StackNode<T> firstElement = new StackNode<T>(value);
-        topElement = firstElement;
+        topElement = new StackNode<T>(value);
     }
 
     public void push(T element) {
